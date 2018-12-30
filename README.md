@@ -45,6 +45,9 @@ Running the CIFAR10 Benchmark
 2018-12-30 08:27:07.590400: step 2930, loss = 1.40 (163.0 examples/sec; 0.785 sec/batch)
 ``` 
 
+The AMD based NOtebook yields
+
+https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-ideapad110.png
 
 Running the same test on the GPU  
 

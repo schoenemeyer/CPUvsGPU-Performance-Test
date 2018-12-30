@@ -47,7 +47,7 @@ Running the CIFAR10 Benchmark
 
 The AMD based NOtebook yields
 
-![After processing](<img src="https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-ideapad110.png" width="252">)
+![After processing](https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-ideapad110.png)
 
 
 Running the same test on the GPU  

@@ -1,13 +1,16 @@
 # CPUvsGPU-Performance-Test
 Compare Intel CPU with NVIDIA GTX 1050Ti with CIFAR10 using Tensorflow
-
+In this example I use the famous CIFAR10 benchmark described in here https://en.wikipedia.org/wiki/CIFAR-10
+The CIFAR-10 dataset contains 60,000 32x32 color images in 10 different classes, airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks.
 ```
 git clone https://github.com/tensorflow/models.git
 cd model/tutorials/image/cifar10
 python cifar10_train.py
 ```
 
-Runnng the CIFAR10 Benchmark
+Running the CIFAR10 Benchmark
+1x Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, 8GB DDR4 
+ yields abut 170 examples/sec.
 
 ```
 2018-12-30 08:25:20.819954: step 2780, loss = 1.22 (177.4 examples/sec; 0.722 sec/batch)

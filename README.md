@@ -50,8 +50,10 @@ The AMD A6-7310 APU based Notebook (6 cores) yields about 2/3 of the Performance
 ![After processing](https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-ideapad110.png)
 
 
-No lets try to compile our own Tensorflow Version for the I5
-
+No lets try to compile our own Tensorflow Version for the I5   
+```
+bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 -k //tensorflow/tools/pip_package:build_pip_package
+```
 
 Running the same test on the GPU  
 

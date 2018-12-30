@@ -1,9 +1,11 @@
 # Tested machines
 
-Lenovo Notebook with 1x i5-6200U CPU Linux running with Ubuntu Subsystem ( 4.4.0-17134-Microsoft #471-Microsoft Fri Dec 07 20:04:00 PST 2018 x86_64 x86_64 x86_64 GNU/Linux ); Host OS Windows 10 HOME, Build 1803.   
+Lenovo Notebook Yoga 500 - 15ISK with 1x i5-6200U CPU Linux running with Ubuntu Subsystem ( 4.4.0-17134-Microsoft #471-Microsoft Fri Dec 07 20:04:00 PST 2018 x86_64 x86_64 x86_64 GNU/Linux ); Host OS Windows 10 HOME, Build 1803.   
 Workstation 1 x AMD with 1 x NVIDIA GTX 1050Ti   
 Lenovo Ideapad 1 x AMD
 
+For this example we assume you have installed python and tensorflow correctly on the plaform
+Python 2.7.12   
 
 
 # CPUvsGPU-Performance-Test

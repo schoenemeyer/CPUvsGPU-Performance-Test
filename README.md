@@ -1,10 +1,11 @@
 # Tested machines
 
 Lenovo Notebook Yoga 500 - 15ISK with 1x i5-6200U CPU Linux running with Ubuntu Subsystem ( 4.4.0-17134-Microsoft #471-Microsoft Fri Dec 07 20:04:00 PST 2018 x86_64 x86_64 x86_64 GNU/Linux ); Host OS Windows 10 HOME, Build 1803.   
-Workstation 1 x AMD with 1 x NVIDIA GTX 1050Ti   
-Lenovo Ideapad 1 x AMD
+Workstation 1 x AMD with 1 x NVIDIA GTX 1050Ti  running under CentOS 7.4
+Lenovo Ideapad 1 x AMD running under CENTOS7.4
 
-For this example we assume you have installed python and tensorflow correctly on the plaform
+
+For this example we assume you have installed python and tensorflow correctly on the plaform  
 Python 2.7.12   
 Tensorflow 1.12.0   
 
@@ -41,3 +42,7 @@ Running the CIFAR10 Benchmark
 2018-12-30 08:26:59.737567: step 2920, loss = 1.23 (180.7 examples/sec; 0.708 sec/batch)
 2018-12-30 08:27:07.590400: step 2930, loss = 1.40 (163.0 examples/sec; 0.785 sec/batch)
 ``` 
+
+
+Running the same test on the GPU  
+

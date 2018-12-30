@@ -6,6 +6,7 @@ Lenovo Ideapad 1 x AMD
 
 For this example we assume you have installed python and tensorflow correctly on the plaform
 Python 2.7.12   
+Tensorflow 1.12.0   
 
 
 # CPUvsGPU-Performance-Test

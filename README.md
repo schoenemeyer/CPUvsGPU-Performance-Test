@@ -45,9 +45,12 @@ Running the CIFAR10 Benchmark
 2018-12-30 08:27:07.590400: step 2930, loss = 1.40 (163.0 examples/sec; 0.785 sec/batch)
 ``` 
 
-The AMD based NOtebook yields
+The AMD A6-7310 APU based Notebook (6 cores) yields about 2/3 of the Performance.
 
 ![After processing](https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-ideapad110.png)
+
+
+No lets try to compile our own Tensorflow Version for the I5
 
 
 Running the same test on the GPU  

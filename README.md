@@ -23,7 +23,7 @@ python cifar10_train.py
 
 Running the CIFAR10 Benchmark
 1x Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, 8GB DDR4 
- yields abut 170 examples/sec.
+ yields about 170 examples/sec.
 
 ```
 2018-12-30 08:25:20.819954: step 2780, loss = 1.22 (177.4 examples/sec; 0.722 sec/batch)

@@ -6,9 +6,10 @@
 
 
 
-For this example we assume you have installed python and tensorflow correctly on the plaform  
-Python 2.7.12   
-Tensorflow 1.12.0   
+For this example we assume you have installed python and tensorflow correctly on the plaform. For this benchmark I used these versions     
+- Python 2.7.12   
+- Keras 2.2.4  
+- Tensorflow 1.12.0 (Intel)  and 1.10.0 (for AMD)  
 
 
 # CPUvsGPU-Performance-Test

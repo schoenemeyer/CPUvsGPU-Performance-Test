@@ -2,7 +2,7 @@
 
 - Lenovo Ideapad 1 x AMD A6-7310 APU with AMD Radeon R4 Graphics and 16GB RAM running under CENTOS7.4   
 - Lenovo Notebook Yoga 500 - 15ISK with 1x i5-6200U CPU Linux running with Ubuntu Subsystem ( 4.4.0-17134-Microsoft #471-Microsoft Fri Dec 07 20:04:00 PST 2018 x86_64 x86_64 x86_64 GNU/Linux ); Host OS Windows 10 HOME, Build 1803.   
-- Workstation 1 x AMD with 1 x NVIDIA GTX 1050Ti  running under CentOS 7.4   
+- Workstation 1 x AMD FX-6300 6c with 1 x NVIDIA GTX 1050Ti  running under CentOS 7.4, 16GB RAM     
 
 
 
@@ -50,10 +50,40 @@ The AMD A6-7310 APU based Notebook (6 cores) yields about 2/3 of the Performance
 ![After processing](https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-ideapad110.png)
 
 
+The AMD FX-6300 based WOrkstation yields
+```
+2018-12-31 09:15:35.268013: step 140, loss = 4.00 (203.7 examples/sec; 0.628 sec/batch)
+2018-12-31 09:15:41.506636: step 150, loss = 4.30 (205.2 examples/sec; 0.624 sec/batch)
+2018-12-31 09:15:47.862790: step 160, loss = 3.86 (201.4 examples/sec; 0.636 sec/batch)
+2018-12-31 09:15:54.127954: step 170, loss = 4.13 (204.3 examples/sec; 0.627 sec/batch)
+2018-12-31 09:16:00.874560: step 180, loss = 3.73 (189.7 examples/sec; 0.675 sec/batch)
+2018-12-31 09:16:07.278367: step 190, loss = 3.94 (199.9 examples/sec; 0.640 sec/batch)
+2018-12-31 09:16:13.869336: step 200, loss = 3.73 (194.2 examples/sec; 0.659 sec/batch)
+2018-12-31 09:16:20.176501: step 210, loss = 3.68 (202.9 examples/sec; 0.631 sec/batch)
+2018-12-31 09:16:26.388101: step 220, loss = 3.73 (206.1 examples/sec; 0.621 sec/batch)
+2018-12-31 09:16:32.745433: step 230, loss = 3.70 (201.3 examples/sec; 0.636 sec/batch)
+2018-12-31 09:16:39.314489: step 240, loss = 3.74 (194.9 examples/sec; 0.657 sec/batch)
+2018-12-31 09:16:45.601244: step 250, loss = 3.62 (203.6 examples/sec; 0.629 sec/batch)
+2018-12-31 09:16:52.049265: step 260, loss = 3.71 (198.5 examples/sec; 0.645 sec/batch)
+2018-12-31 09:16:58.435356: step 270, loss = 3.52 (200.4 examples/sec; 0.639 sec/batch)
+2018-12-31 09:17:04.652128: step 280, loss = 3.78 (205.9 examples/sec; 0.622 sec/batch)
+2018-12-31 09:17:11.206604: step 290, loss = 3.63 (195.3 examples/sec; 0.655 sec/batch)
+2018-12-31 09:17:17.520113: step 300, loss = 3.42 (202.7 examples/sec; 0.631 sec/batch)
+2018-12-31 09:17:23.891535: step 310, loss = 3.50 (200.9 examples/sec; 0.637 sec/batch)
+2018-12-31 09:17:30.363019: step 320, loss = 3.42 (197.8 examples/sec; 0.647 sec/batch)
+2018-12-31 09:17:36.679483: step 330, loss = 3.40 (202.6 examples/sec; 0.632 sec/batch)
+2018-12-31 09:17:42.976991: step 340, loss = 3.35 (203.3 examples/sec; 0.630 sec/batch)
+
+```
+
+Running the same test on the GPU 
+
+
+
 No lets try to compile our own Tensorflow Version for the I5   
 ```
 bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 -k //tensorflow/tools/pip_package:build_pip_package
 ```
 
-Running the same test on the GPU  
+ 
 

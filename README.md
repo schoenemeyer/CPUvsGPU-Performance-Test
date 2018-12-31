@@ -18,7 +18,7 @@ In this example I use the famous CIFAR10 benchmark described in here https://en.
 The CIFAR-10 dataset contains 60,000 32x32 color images in 10 different classes, airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks.
 ```
 git clone https://github.com/tensorflow/models.git
-cd model/tutorials/image/cifar10
+cd models/tutorials/image/cifar10
 python cifar10_train.py
 ```
 

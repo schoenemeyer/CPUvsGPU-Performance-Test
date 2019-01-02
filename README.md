@@ -87,6 +87,12 @@ sudo yum install -y java-11-openjdk-devel.x86_64
 https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/
 - install bazel
 https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md   
+- download Tensorflow from
+```
+git clone https://github.com/tensorflow/tensorflow.git
+cd tensorflow
+```
+
 - build your tensorflow package like this
 
 ```

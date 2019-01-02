@@ -77,12 +77,14 @@ The AMD FX-6300 based Workstation yields about the same peformance as the i5-620
 ```
 
 
-In order to get better performance you might build a verison for your specific CPU or GPU you can build your own Tensorflow Version
+In order to get better performance you might build a verison for your specific CPU or GPU you can build your own Tensorflow Version. I executed on the AMD Workstation the following steps:   
 
 - install Java JDK  
-
+```
+sudo yum install -y java-11-openjdk-devel.x86_64
+```
 - set JAVA_HOME
-
+https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/
 - install bazel
 https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md   
 - build your tensorflow package like this

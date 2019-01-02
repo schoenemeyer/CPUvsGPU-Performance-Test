@@ -76,14 +76,26 @@ The AMD FX-6300 based WOrkstation yields
 
 ```
 
-Running the same test on the GPU 
 
+In order to get better performance you might build a verison for your specific CPU or GPU you can build your own Tensorflow Version
 
+- install Java JDK  
 
-No lets try to compile our own Tensorflow Version for the I5   
+- set JAVA_HOME
+
+- install bazel
+https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md   
+- build your tensorflow package like this
+
 ```
 bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 -k //tensorflow/tools/pip_package:build_pip_package
+
 ```
+- install your tensorflow package
+
+Compilation will take up to one hour.
+
+No lets try to compile our own Tensorflow Version for the I5  
 
  
-
+Running the same test on the GPU 

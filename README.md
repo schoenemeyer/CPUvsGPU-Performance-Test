@@ -50,7 +50,7 @@ The AMD A6-7310 APU based Notebook (6 cores) yields about 2/3 of the Performance
 ![After processing](https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-ideapad110.png)
 
 
-The AMD FX-6300 based WOrkstation yields
+The AMD FX-6300 based Workstation yields about the same peformance as the i5-6200U notebook
 ```
 2018-12-31 09:15:35.268013: step 140, loss = 4.00 (203.7 examples/sec; 0.628 sec/batch)
 2018-12-31 09:15:41.506636: step 150, loss = 4.30 (205.2 examples/sec; 0.624 sec/batch)

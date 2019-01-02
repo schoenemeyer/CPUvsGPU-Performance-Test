@@ -95,6 +95,11 @@ bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both 
 ```
 - install your tensorflow package
 
+```
+pip install /tmp/tensorflow_pkg/tensorflow-version-tags.whl
+
+```
+
 Compilation will take up to one hour.
 
 No lets try to compile our own Tensorflow Version for the I5  

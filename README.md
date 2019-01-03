@@ -96,7 +96,7 @@ cd
 sudo yum install -y bazel.x86_64
 ```
 
-- download Tensorflow from
+- Download Tensorflow 
 ```
 git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow
@@ -105,7 +105,7 @@ cd tensorflow
 
 ```
 
-Build Tensorflow with bazel
+- Build Tensorflow with bazel
 
 CPU-only
 
@@ -147,9 +147,7 @@ pip install /tmp/tensorflow_pkg/tensorflow-version-tags.whl
 
 ```
 
-Compilation will take up to one hour.
-
-No lets try to compile our own Tensorflow Version for the I5  
+Depending on your platform, Compilation will take up to one hour.
 
  
 Running the same test on the GPU 

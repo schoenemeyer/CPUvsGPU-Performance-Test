@@ -147,8 +147,6 @@ INFO: Elapsed time: 9244.901s, Critical Path: 433.07s
 INFO: 11036 processes: 11036 local.
 INFO: Build completed successfully, 14151 total actions
 [thomas@localhost tensorflow]$ 
-
-
 ```
 - Build your local whl file with 
 

@@ -1,17 +1,22 @@
+# Purpose of this lab
+
+Evaluate the deep learning capabilities of desktop computers using NVIDIA Geforce GPU Engine. 
+
+
 # Tested machines
 
-- Lenovo Ideapad 1 x AMD A6-7310 APU with AMD Radeon R4 Graphics and 16GB RAM running under CENTOS7.4   
-- Lenovo Notebook Yoga 500 - 15ISK with 1x i5-6200U CPU Linux running with Ubuntu Subsystem ( 4.4.0-17134-Microsoft #471-Microsoft Fri Dec 07 20:04:00 PST 2018 x86_64 x86_64 x86_64 GNU/Linux ); Host OS Windows 10 HOME, Build 1803.   
-- Workstation 1 x AMD FX-6300 6c with 1 x NVIDIA GTX 1050Ti  running under CentOS 7.4, 16GB RAM, CUDA 9.1 and NVIDIA Driver 390.87   
+- CPU-only: Lenovo Ideapad 1 x AMD A6-7310 APU with AMD Radeon R4 Graphics and 16GB RAM running under CENTOS7.4   
+- CPU-only: Lenovo Notebook Yoga 500 - 15ISK with 1x i5-6200U CPU Linux running with Ubuntu Subsystem ( 4.4.0-17134-Microsoft #471-Microsoft Fri Dec 07 20:04:00 PST 2018 x86_64 x86_64 x86_64 GNU/Linux ); Host OS Windows 10 HOME, Build 1803.   
+- GPU equipped Workstation 1 x AMD FX-6300 6c with 1 x NVIDIA GTX 1050Ti running under CentOS 7.4, 16GB RAM, CUDA 9.1 and NVIDIA Driver 390.87. The GPU has 768 cores running with 1.3 GHz and comes with 4 GB GDDR5. The underlying architecture is Pascal.    
 
-
-For this example we assume you have installed python and tensorflow correctly on the plaform. For this benchmark I used these versions     
+For this lab you have installed python and tensorflow correctly on the platform. For this benchmark I used these versions     
 - Python 2.7.12   
 - Keras 2.2.4  
 - Tensorflow 1.12.0 (Intel)  and 1.10.0 (for AMD)  
+A very useful guide for beginners is to follow this https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/
 
+# CPU vs GPU-Performance-Test
 
-# CPUvsGPU-Performance-Test
 Compare Intel CPU with NVIDIA GTX 1050Ti with CIFAR10 using Tensorflow
 In this example I use the famous CIFAR10 benchmark described in here https://en.wikipedia.org/wiki/CIFAR-10
 The CIFAR-10 dataset contains 60,000 32x32 color images in 10 different classes, airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks.

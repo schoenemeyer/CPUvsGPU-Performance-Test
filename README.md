@@ -2,8 +2,7 @@
 
 - Lenovo Ideapad 1 x AMD A6-7310 APU with AMD Radeon R4 Graphics and 16GB RAM running under CENTOS7.4   
 - Lenovo Notebook Yoga 500 - 15ISK with 1x i5-6200U CPU Linux running with Ubuntu Subsystem ( 4.4.0-17134-Microsoft #471-Microsoft Fri Dec 07 20:04:00 PST 2018 x86_64 x86_64 x86_64 GNU/Linux ); Host OS Windows 10 HOME, Build 1803.   
-- Workstation 1 x AMD FX-6300 6c with 1 x NVIDIA GTX 1050Ti  running under CentOS 7.4, 16GB RAM     
-
+- Workstation 1 x AMD FX-6300 6c with 1 x NVIDIA GTX 1050Ti  running under CentOS 7.4, 16GB RAM, CUDA 9.1 and NVIDIA Driver 390.87   
 
 
 For this example we assume you have installed python and tensorflow correctly on the plaform. For this benchmark I used these versions     
@@ -166,4 +165,37 @@ total 128640
 pip install /tmp/tensorflow-gpu_pkg/tensorflow-1.12.0-cp27-cp27mu-linux_x86_64.whl
 
 ```
-Running the same test on the GPU 
+Running the same test on the GPU on the AMD Workstation yields a whopping 5000 examples/sec (!) which is over 25x increase compared to the run without using the Geforce 
+
+2019-01-03 17:41:57.641355: step 2600, loss = 1.34 (3019.0 examples/sec; 0.042 sec/batch)
+2019-01-03 17:41:57.894708: step 2610, loss = 1.52 (5052.2 examples/sec; 0.025 sec/batch)
+2019-01-03 17:41:58.149339: step 2620, loss = 1.52 (5026.9 examples/sec; 0.025 sec/batch)
+2019-01-03 17:41:58.405210: step 2630, loss = 1.33 (5002.5 examples/sec; 0.026 sec/batch)
+2019-01-03 17:41:58.659363: step 2640, loss = 1.41 (5036.3 examples/sec; 0.025 sec/batch)
+2019-01-03 17:41:58.909700: step 2650, loss = 1.55 (5113.1 examples/sec; 0.025 sec/batch)
+2019-01-03 17:41:59.163408: step 2660, loss = 1.30 (5045.2 examples/sec; 0.025 sec/batch)
+2019-01-03 17:41:59.417626: step 2670, loss = 1.42 (5035.0 examples/sec; 0.025 sec/batch)
+2019-01-03 17:41:59.690420: step 2680, loss = 1.46 (4692.2 examples/sec; 0.027 sec/batch)
+2019-01-03 17:41:59.956035: step 2690, loss = 1.63 (4819.2 examples/sec; 0.027 sec/batch)
+2019-01-03 17:42:00.367474: step 2700, loss = 1.27 (3111.0 examples/sec; 0.041 sec/batch)
+2019-01-03 17:42:00.627855: step 2710, loss = 1.37 (4915.8 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:00.887469: step 2720, loss = 1.32 (4930.4 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:01.144161: step 2730, loss = 1.38 (4986.6 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:01.400534: step 2740, loss = 1.30 (4992.7 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:01.656574: step 2750, loss = 1.36 (4999.2 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:01.914569: step 2760, loss = 1.16 (4961.4 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:02.170962: step 2770, loss = 1.30 (4992.4 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:02.425906: step 2780, loss = 1.31 (5020.7 examples/sec; 0.025 sec/batch)
+2019-01-03 17:42:02.692558: step 2790, loss = 1.27 (4800.3 examples/sec; 0.027 sec/batch)
+2019-01-03 17:42:03.128165: step 2800, loss = 1.37 (2938.4 examples/sec; 0.044 sec/batch)
+2019-01-03 17:42:03.385072: step 2810, loss = 1.35 (4982.2 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:03.636899: step 2820, loss = 1.35 (5082.9 examples/sec; 0.025 sec/batch)
+2019-01-03 17:42:03.891331: step 2830, loss = 1.44 (5030.8 examples/sec; 0.025 sec/batch)
+2019-01-03 17:42:04.143003: step 2840, loss = 1.34 (5086.0 examples/sec; 0.025 sec/batch)
+2019-01-03 17:42:04.396034: step 2850, loss = 1.17 (5058.8 examples/sec; 0.025 sec/batch)
+2019-01-03 17:42:04.661046: step 2860, loss = 1.28 (4830.0 examples/sec; 0.027 sec/batch)
+2019-01-03 17:42:04.915042: step 2870, loss = 1.45 (5039.4 examples/sec; 0.025 sec/batch)
+2019-01-03 17:42:05.172771: step 2880, loss = 1.28 (4966.3 examples/sec; 0.026 sec/batch)
+2019-01-03 17:42:05.428233: step 2890, loss = 1.22 (5010.5 examples/sec; 0.026 sec/batch)
+
+

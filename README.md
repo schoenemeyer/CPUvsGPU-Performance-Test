@@ -19,8 +19,8 @@ https://machinelearningmastery.com/setup-python-environment-machine-learning-dee
 
 # CPU vs GPU-Performance-Test
 
-Compare Intel CPU with NVIDIA GTX 1050Ti with CIFAR10 using Tensorflow
-In this example I use the famous CIFAR10 benchmark described in here https://en.wikipedia.org/wiki/CIFAR-10
+In this lab the famous CIFAR10 benchmark will be used for the evaluation. The Benchmark is described in here https://en.wikipedia.org/wiki/CIFAR-10
+
 The CIFAR-10 dataset contains 60,000 32x32 color images in 10 different classes, airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks.
 ```
 git clone https://github.com/tensorflow/models.git
@@ -81,7 +81,6 @@ The AMD FX-6300 based Workstation yields about the same peformance as the i5-620
 2018-12-31 09:17:42.976991: step 340, loss = 3.35 (203.3 examples/sec; 0.630 sec/batch)
 
 ```
-
 
 In order to get better performance you have to build a Tensorflow package for your specific CPU or GPU. This is possible by using bazel. I followed the instructions on https://github.com/tensorflow/tensorflow/issues/22053 and executed on the AMD Workstation the following steps:   
 

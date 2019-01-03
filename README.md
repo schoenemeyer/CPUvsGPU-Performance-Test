@@ -140,14 +140,19 @@ INFO: Build completed successfully, 14151 total actions
 bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 ```
 
-- Now install your tensorflow package
+Depending on your platform, Compilation will take up to one hour. Once the build is done, you will see a newly build whl file in your temporary directory like shown below
+
+```
+[thomas@localhost tensorflow]$ ll /tmp/tensorflow-gpu_pkg
+total 128640
+-rw-rw-r--. 1 thomas thomas 131725719 Jan  3 17:18 tensorflow-1.12.0-cp27-cp27mu-linux_x86_64.whl
+[thomas@localhost tensorflow]$
+
+```
+ - Now install your tensorflow package
 
 ```
 pip install /tmp/tensorflow_pkg/tensorflow-version-tags.whl
 
 ```
-
-Depending on your platform, Compilation will take up to one hour.
-
- 
 Running the same test on the GPU 

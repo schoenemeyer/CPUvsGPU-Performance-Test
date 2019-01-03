@@ -13,7 +13,8 @@ For this lab you have installed python and tensorflow correctly on the platform.
 - Python 2.7.12   
 - Keras 2.2.4  
 - Tensorflow 1.12.0 (Intel)  and 1.10.0 (for AMD)  
-A very useful guide for beginners is to follow   
+
+If you are missing these basics, I recommend to read this very useful guide for beginners    
 https://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/
 
 # CPU vs GPU-Performance-Test

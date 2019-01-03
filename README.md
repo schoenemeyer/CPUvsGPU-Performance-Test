@@ -166,7 +166,7 @@ pip install /tmp/tensorflow-gpu_pkg/tensorflow-1.12.0-cp27-cp27mu-linux_x86_64.w
 
 ```
 Running the same test on the GPU on the AMD Workstation yields a whopping 5000 examples/sec (!) which is over 25x increase compared to the run without using the Geforce 
-
+```
 2019-01-03 17:41:57.641355: step 2600, loss = 1.34 (3019.0 examples/sec; 0.042 sec/batch)
 2019-01-03 17:41:57.894708: step 2610, loss = 1.52 (5052.2 examples/sec; 0.025 sec/batch)
 2019-01-03 17:41:58.149339: step 2620, loss = 1.52 (5026.9 examples/sec; 0.025 sec/batch)
@@ -197,5 +197,9 @@ Running the same test on the GPU on the AMD Workstation yields a whopping 5000 e
 2019-01-03 17:42:04.915042: step 2870, loss = 1.45 (5039.4 examples/sec; 0.025 sec/batch)
 2019-01-03 17:42:05.172771: step 2880, loss = 1.28 (4966.3 examples/sec; 0.026 sec/batch)
 2019-01-03 17:42:05.428233: step 2890, loss = 1.22 (5010.5 examples/sec; 0.026 sec/batch)
+```
 
+You can check with nvidia-smi -l 2 during the run, and you will see a load between 75% and 85% load on the GPU.
+
+![After processing](https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-gpu-nvidia-smi.png)
 

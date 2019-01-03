@@ -203,3 +203,6 @@ You can check with nvidia-smi -l 2 during the run, and you will see a load betwe
 
 ![After processing](https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-gpu-nvidia-smi.png)
 
+This means a job that may take a day on your Workstation can be done in less than one hour, just by adding a pretty cheap Geforce GTX 1050Ti card with 768 cores and 4 GB GDDR5. 
+
+

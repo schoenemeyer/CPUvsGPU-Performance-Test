@@ -87,19 +87,42 @@ sudo yum install -y java-11-openjdk-devel.x86_64
 https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/
 - install bazel
 https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md   
+
+
 - download Tensorflow from
 ```
 git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow
-```
 
-- build your tensorflow package like this
-
-```
-bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 -k //tensorflow/tools/pip_package:build_pip_package
+./configure
 
 ```
-- install your tensorflow package
+
+- build your tensorflow package like this using CUDA
+
+
+```
+bazel build -c opt --config=cuda //tensorflow/tools/pip_package:build_pip_package
+```
+If the build is successful, you will see a message like this :
+
+```
+INFO: From Compiling tensorflow/core/kernels/broadcast_to_op_gpu.cu.cc:
+external/com_google_absl/absl/strings/string_view.h(496): warning: expression has no effect
+
+external/com_google_absl/absl/strings/string_view.h(496): warning: expression has no effect
+
+Target //tensorflow/tools/pip_package:build_pip_package up-to-date:
+  bazel-bin/tensorflow/tools/pip_package/build_pip_package
+INFO: Elapsed time: 9244.901s, Critical Path: 433.07s
+INFO: 11036 processes: 11036 local.
+INFO: Build completed successfully, 14151 total actions
+[thomas@localhost tensorflow]$ 
+
+
+```
+
+- Now install your tensorflow package
 
 ```
 pip install /tmp/tensorflow_pkg/tensorflow-version-tags.whl

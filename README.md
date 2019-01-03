@@ -77,7 +77,7 @@ The AMD FX-6300 based Workstation yields about the same peformance as the i5-620
 ```
 
 
-In order to get better performance you might build a verison for your specific CPU or GPU you can build your own Tensorflow Version. I executed on the AMD Workstation the following steps:   
+In order to get better performance you might build a verison for your specific CPU or GPU you can build your own Tensorflow Version. I followed the instructions on https://github.com/tensorflow/tensorflow/issues/22053 and executed on the AMD Workstation the following steps:   
 
 - install Java JDK  
 ```
@@ -87,7 +87,12 @@ sudo yum install -y java-11-openjdk-devel.x86_64
 https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/
 - install bazel
 https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md   
-
+```
+cd /etc/yum.repos.d/
+sudo wget https://copr.fedorainfracloud.org/coprs/vbatts/bazel/repo/epel-7/vbatts-bazel-epel-7.repo
+cd
+sudo yum install -y bazel.x86_64
+```
 
 - download Tensorflow from
 ```
@@ -98,8 +103,14 @@ cd tensorflow
 
 ```
 
-- build your tensorflow package like this using CUDA
+Build Tensorflow with bazel
 
+CPU-only
+
+```
+bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+```
+with GPU Support
 
 ```
 bazel build -c opt --config=cuda //tensorflow/tools/pip_package:build_pip_package
@@ -120,6 +131,11 @@ INFO: Build completed successfully, 14151 total actions
 [thomas@localhost tensorflow]$ 
 
 
+```
+- Build your local whl file with 
+
+```
+bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 ```
 
 - Now install your tensorflow package

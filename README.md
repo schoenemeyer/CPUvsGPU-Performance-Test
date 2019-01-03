@@ -96,6 +96,17 @@ cd
 sudo yum install -y bazel.x86_64
 ```
 
+First, lets just install TF from python standard lib so we can get all the dependencies.
+```
+sudo pip install tensorflow-gpu
+```
+
+Now uninstall so we can build from source
+
+```
+sudo pip uninstall tensorflow-gpu
+```
+
 - Download Tensorflow 
 ```
 git clone https://github.com/tensorflow/tensorflow.git
@@ -140,7 +151,7 @@ INFO: Build completed successfully, 14151 total actions
 bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 ```
 
-Depending on your platform, Compilation will take up to one hour. Once the build is done, you will see a newly build whl file in your temporary directory like shown below
+Depending on your platform, Compilation will take up to one hour. Once the build is done, you will see a newly built whl file in your temporary directory like shown below
 
 ```
 [thomas@localhost tensorflow]$ ll /tmp/tensorflow-gpu_pkg
@@ -152,7 +163,7 @@ total 128640
  - Now install your tensorflow package
 
 ```
-pip install /tmp/tensorflow_pkg/tensorflow-version-tags.whl
+pip install /tmp/tensorflow-gpu_pkg/tensorflow-1.12.0-cp27-cp27mu-linux_x86_64.whl
 
 ```
 Running the same test on the GPU 

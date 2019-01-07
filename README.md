@@ -136,7 +136,10 @@ Now uninstall so we can build from source
 sudo pip uninstall tensorflow-gpu
 ```
 
-- Download Tensorflow 
+- Download Tensorflow and prepare compiling with bazel. You will get a number of questions during the configure process.
+As abest practice you can follow the responses given in this github   
+https://github.com/yaroslavvb/tensorflow-community-wheels
+
 ```
 git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow

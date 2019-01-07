@@ -7,6 +7,7 @@ Evaluate the deep learning capabilities of desktop computers using NVIDIA Geforc
 
 - CPU-only: Lenovo Ideapad 1 x AMD A6-7310 APU with AMD Radeon R4 Graphics and 16GB RAM running under CENTOS7.4   
 - CPU-only: Lenovo Notebook Yoga 500 - 15ISK with 1x i5-6200U CPU Linux running with Ubuntu Subsystem ( 4.4.0-17134-Microsoft #471-Microsoft Fri Dec 07 20:04:00 PST 2018 x86_64 x86_64 x86_64 GNU/Linux ); Host OS Windows 10 HOME, Build 1803.   
+- CPU-only: Microsoft Surface 2 Notebook with 1x i7-8650 CPU CPU Linux running with Ubuntu Subsystem
 - GPU equipped Workstation 1 x AMD FX-6300 6c with 1 x NVIDIA GTX 1050Ti running under CentOS 7.4, 16GB RAM, CUDA 9.1 and NVIDIA Driver 390.87. The GPU has 768 cores running with 1.3 GHz and comes with 4 GB GDDR5. The underlying architecture is Pascal.    
 
 For this lab you have installed python and tensorflow correctly on the platform. For this benchmark I used these versions     
@@ -51,6 +52,25 @@ Running the CIFAR10 Benchmark
 2018-12-30 08:27:07.590400: step 2930, loss = 1.40 (163.0 examples/sec; 0.785 sec/batch)
 ``` 
 
+Running the same benchmark on a Microsoft Surface 2 Notebook with i7-8650 (8c) gives rather similar figures
+
+``` 
+2019-01-07 16:33:02.824971: step 170, loss = 3.91 (268.9 examples/sec; 0.476 sec/batch)
+2019-01-07 16:33:07.803077: step 180, loss = 3.81 (257.1 examples/sec; 0.498 sec/batch)
+2019-01-07 16:33:13.483433: step 190, loss = 3.99 (225.3 examples/sec; 0.568 sec/batch)
+2019-01-07 16:33:19.573732: step 200, loss = 3.87 (210.2 examples/sec; 0.609 sec/batch)
+2019-01-07 16:33:25.637256: step 210, loss = 3.80 (211.1 examples/sec; 0.606 sec/batch)
+2019-01-07 16:33:31.303761: step 220, loss = 3.69 (225.9 examples/sec; 0.567 sec/batch)
+2019-01-07 16:33:36.890458: step 230, loss = 3.79 (229.1 examples/sec; 0.559 sec/batch)
+2019-01-07 16:33:42.437677: step 240, loss = 3.65 (230.7 examples/sec; 0.555 sec/batch)
+2019-01-07 16:33:48.293530: step 250, loss = 3.63 (218.6 examples/sec; 0.586 sec/batch)
+2019-01-07 16:33:54.291822: step 260, loss = 3.61 (213.4 examples/sec; 0.600 sec/batch)
+2019-01-07 16:34:01.036912: step 270, loss = 3.67 (189.8 examples/sec; 0.675 sec/batch)
+2019-01-07 16:34:06.864479: step 280, loss = 3.78 (219.6 examples/sec; 0.583 sec/batch)
+2019-01-07 16:34:12.654502: step 290, loss = 3.44 (221.1 examples/sec; 0.579 sec/batch)
+2019-01-07 16:34:18.429889: step 300, loss = 3.56 (221.6 examples/sec; 0.578 sec/batch)
+2019-01-07 16:34:24.001734: step 310, loss = 3.51 (229.7 examples/sec; 0.557 sec/batch)
+``` 
 The AMD A6-7310 APU based Notebook (6 cores) yields about 2/3 of the Performance.
 
 ![After processing](https://github.com/schoenemeyer/CPUvsGPU-Performance-Test/blob/master/cifar10-ideapad110.png)

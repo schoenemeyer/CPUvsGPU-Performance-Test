@@ -114,6 +114,10 @@ https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/
 followed from: https://gist.github.com/gentaiscool/a628fab5cd98953af7f46b69463394b3
 or follow the instructions from    
 https://github.com/bazelbuild/bazel/blob/master/site/docs/install-redhat.md   
+
+If you want to build bazel for Ubuntu 14, 16 or 18, please follow   
+https://docs.bazel.build/versions/master/install-ubuntu.html
+
 ```
 cd /etc/yum.repos.d/
 sudo wget https://copr.fedorainfracloud.org/coprs/vbatts/bazel/repo/epel-7/vbatts-bazel-epel-7.repo

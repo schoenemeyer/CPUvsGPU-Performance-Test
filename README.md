@@ -236,4 +236,29 @@ You can check with nvidia-smi -l 2 during the run, and you will see a load betwe
 
 This means a job that may take a day on your Workstation can be done in less than one hour, just by adding a pretty cheap Geforce GTX 1050Ti card with 768 cores and 4 GB GDDR5. 
 
+One might ask how the specific tensorflow version can impact the performance for the I7 Intel processor.
+I build tensorflow for the i7 notebook and rerun cifa10_train
+
+python cifar10_train.py
+
+```
+2019-01-08 09:50:07.281777: step 10, loss = 4.64 (419.1 examples/sec; 0.305 sec/batch)
+2019-01-08 09:50:10.198301: step 20, loss = 4.56 (438.9 examples/sec; 0.292 sec/batch)
+2019-01-08 09:50:13.117071: step 30, loss = 4.50 (438.5 examples/sec; 0.292 sec/batch)
+2019-01-08 09:50:16.047671: step 40, loss = 4.30 (436.8 examples/sec; 0.293 sec/batch)
+2019-01-08 09:50:18.922085: step 50, loss = 4.33 (445.3 examples/sec; 0.287 sec/batch)
+2019-01-08 09:50:21.854652: step 60, loss = 4.26 (436.5 examples/sec; 0.293 sec/batch)
+2019-01-08 09:50:25.045465: step 70, loss = 4.12 (401.2 examples/sec; 0.319 sec/batch)
+2019-01-08 09:50:28.121649: step 80, loss = 4.19 (416.1 examples/sec; 0.308 sec/batch)
+2019-01-08 09:50:31.043655: step 90, loss = 4.16 (438.1 examples/sec; 0.292 sec/batch)
+2019-01-08 09:50:33.941628: step 100, loss = 4.24 (441.7 examples/sec; 0.290 sec/batch)
+2019-01-08 09:50:37.011136: step 110, loss = 4.13 (417.0 examples/sec; 0.307 sec/batch)
+2019-01-08 09:50:40.007970: step 120, loss = 4.13 (427.1 examples/sec; 0.300 sec/batch)
+2019-01-08 09:50:42.887374: step 130, loss = 4.15 (444.5 examples/sec; 0.288 sec/batch)
+2019-01-08 09:50:46.135441: step 140, loss = 3.93 (394.1 examples/sec; 0.325 sec/batch)
+```
+
+this is a remarkable improvement compared to the default whl (factor 2).
+Therefore, if you are missing a GPU, try to build your own optimized tensorflow version!
+
 

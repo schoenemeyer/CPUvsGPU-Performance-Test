@@ -262,3 +262,34 @@ this is a remarkable improvement compared to the default whl (factor 2).
 Therefore, if you are missing a GPU, try to build your own optimized tensorflow version!
 
 
+Now lets get back to Nvidia GPU. If you are lucky to get a system with a V100 Tesla card you can get way more
+```
+2019-03-19 12:24:39.452905: step 99650, loss = 0.74 (26329.9 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:39.503508: step 99660, loss = 0.89 (25301.8 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:39.552622: step 99670, loss = 0.83 (26055.0 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:39.601304: step 99680, loss = 0.55 (26292.8 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:39.653642: step 99690, loss = 0.84 (24456.8 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:39.842918: step 99700, loss = 0.69 (6763.3 examples/sec; 0.019 sec/batch)
+2019-03-19 12:24:39.894984: step 99710, loss = 0.72 (24574.9 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:39.943606: step 99720, loss = 0.68 (26325.6 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:39.993851: step 99730, loss = 0.70 (25475.5 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.044455: step 99740, loss = 0.77 (25294.2 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.096368: step 99750, loss = 0.62 (24657.9 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.144780: step 99760, loss = 0.70 (26439.2 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.193661: step 99770, loss = 0.97 (26185.0 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.242644: step 99780, loss = 0.82 (26132.6 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.297793: step 99790, loss = 0.74 (23208.7 examples/sec; 0.006 sec/batch)
+2019-03-19 12:24:40.487197: step 99800, loss = 0.84 (6758.5 examples/sec; 0.019 sec/batch)
+2019-03-19 12:24:40.540311: step 99810, loss = 0.66 (24093.4 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.588428: step 99820, loss = 0.77 (26601.7 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.643405: step 99830, loss = 0.52 (23286.9 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.691324: step 99840, loss = 0.78 (26705.9 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.741098: step 99850, loss = 0.64 (25716.4 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.790251: step 99860, loss = 0.77 (26041.0 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.842583: step 99870, loss = 0.65 (24459.9 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.892506: step 99880, loss = 0.61 (25638.9 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:40.940998: step 99890, loss = 0.71 (26396.4 examples/sec; 0.005 sec/batch)
+2019-03-19 12:24:41.130107: step 99900, loss = 0.54 (6768.6 examples/sec; 0.019 sec/batch)
+```
+
+

@@ -262,7 +262,11 @@ this is a remarkable improvement compared to the default whl (factor 2).
 Therefore, if you are missing a GPU, try to build your own optimized tensorflow version!
 
 
-Now lets get back to Nvidia GPU. If you are lucky to get a system with a V100 Tesla card you can get way more
+Now lets get back to Nvidia GPU. If you are lucky to get a system with a V100 Tesla card you can get way more.
+For this test the NGC container  nvcr.io/nvidia/tensorflow:19.02-py3 on a DGX-1 system.
+```
+python cifar10_train.py
+```
 ```
 2019-03-19 12:24:39.452905: step 99650, loss = 0.74 (26329.9 examples/sec; 0.005 sec/batch)
 2019-03-19 12:24:39.503508: step 99660, loss = 0.89 (25301.8 examples/sec; 0.005 sec/batch)

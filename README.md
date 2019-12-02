@@ -26,7 +26,7 @@ The CIFAR-10 dataset contains 60,000 32x32 color images in 10 different classes,
 ```
 git clone https://github.com/tensorflow/models.git
 cd models/tutorials/image/cifar10
-pip install tensorflow_datasets
+pip install tensorflow_datasets==1.0.1
 python cifar10_train.py
 ```
 
